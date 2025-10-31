@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GDE · Great Debaters ENSAM Rabat</title>
+  <meta name="description" content="Découvrez GDE, le club d'éloquence et de débats de l'ENSAM Rabat. Développez votre art oratoire, votre esprit critique et rejoignez une communauté passionnée.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SVG SPRITE -->
+  <div class="svg-sprite">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <symbol id="icon-feather" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/>
+          <line x1="16" y1="8" x2="2" y2="22"/>
+          <line x1="17.5" y1="15" x2="9" y2="15"/>
+        </symbol>
+        
+        <symbol id="icon-gavel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m14 13-7.5 7.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L11 10"/>
+          <path d="m16 16 6-6"/>
+          <path d="m8 8 6-6"/>
+          <path d="m9 7 8 8"/>
+          <path d="m21 11-8-8"/>
+        </symbol>
+        
+        <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </symbol>
+        
+        <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </symbol>
+        
+        <symbol id="icon-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+          <line x1="12" x2="12" y1="19" y2="22"/>
+        </symbol>
+        
+        <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </symbol>
+        
+        <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </symbol>
+        
+        <symbol id="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </symbol>
+        
+        <symbol id="icon-shopping" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </symbol>
+        
+        <symbol id="stamp-declassified" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="4"/>
+          <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="100" y="92" text-anchor="middle" font-size="22" font-weight="bold" fill="currentColor">DÉCLASSIFIÉ</text>
+          <text x="100" y="118" text-anchor="middle" font-size="13" fill="currentColor">ENSAM RABAT</text>
+        </symbol>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <div class="container">
+      <div class="masthead-inner">
+        <a href="index.html" class="masthead-logo">
+          <img class="masthead-logo-img" src="logo gde.png" alt="GDE logo" loading="lazy">
+          GDE
+        </a>  
+        
+        <div class="menu-toggle" aria-label="Toggle menu" role="button" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <ul class="masthead-nav small-caps">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="https://biblioensamr.gde.com" target="_blank" rel="noopener">BiblioEnsamr</a></li>
+            <li><a href="https://journal.gde.com" target="_blank" rel="noopener">Journal</a></li>
+            <li><a href="https://shop.gde.com" target="_blank" rel="noopener">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="bg.png" alt="GDE background" loading="eager">
+    </div>
+    <svg class="hero-stamp" aria-hidden="true">
+      <use href="#stamp-declassified"/>
+    </svg>
+    <div class="hero-content">
+      <h1>GDE — Great Debaters ENSAM Rabat</h1>
+      <p class="hero-strapline">Speak • Write • Revolutionize</p>
+      <!-- Hidden whisper (revealed via secret triggers) -->
+  <p class="hero-whisper" aria-hidden="true" aria-live="polite">It’s more than a club… it’s a concept.</p>
+    </div>
+  </section>
+  
+  <!-- Subtle watermark: #lahomabarik -->
+  <div class="watermark-lahomabarik" aria-hidden="true">#lahomabarik</div>
+
+  <!-- QUI SOMMES-NOUS -->
+  <section id="qui-nous-sommes" class="section content-section">
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="content-image reveal-scale">
+          <img src="pic.png" alt="Qui sommes-nous" loading="lazy">
+        </div>
+        
+        <div class="content-text">
+          <h2 class="reveal title-bronze">Qui sommes-nous ?</h2>
+          <p class="drop-cap reveal">
+            The Great Debaters ENSAM Rabat (GDE) est un club étudiant à l’ENSAM Rabat. Nous rassemblons des étudiantes et étudiants passionnés par le débat, la prise de parole et l’échange d’idées.
+          </p>
+          <p class="reveal">
+            <span class="para-lead">Ce que nous faisons —</span> On organise des débats, discussions et événements qui t’aident à mieux argumenter, structurer ta pensée et t’exprimer avec clarté et confiance. On cultive l’esprit critique et l’ouverture en confrontant des points de vue variés — un vrai terrain d’entraînement intellectuel.
+          </p>
+          <p class="reveal">
+            <span class="para-lead">Notre ambition —</span> Faire grandir une communauté d’oratrices et d’orateurs capables de raisonner avec rigueur, parler avec impact et porter des idées qui comptent sur le campus et au‑delà.
+          </p>
+        </div>
+      </div>
+
+      <blockquote class="pull-quote reveal">
+        God Helps Those Who Help Themselves.
+      </blockquote>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- CE QUE NOUS FAISONS -->
+  <section id="ce-que-nous-faisons" class="section bg-dark">
+    <div class="container">
+      <h2 class="reveal title-bronze text-center mb-3">Ce que nous faisons</h2>
+      <p class="section-intro reveal">Quatre piliers pour développer votre art oratoire et votre esprit critique</p>
+      
+      <div class="numbered-features">
+        
+        <div class="numbered-card reveal">
+          <div class="number-badge">01</div>
+          <div class="numbered-card-content">
+            <div class="numbered-icon-wrapper">
+              <svg class="numbered-icon" aria-hidden="true"><use href="#icon-gavel"/></svg>
+            </div>
+            <h3>Débats & Tournois</h3>
+            <p>Débats (format Oxford) et tournois inter‑écoles. Tu apprends à convaincre, gérer ton temps et réfuter efficacement.</p>
+            <div class="card-connector"></div>
+          </div>
+        </div>
+
+        <div class="numbered-card reveal">
+          <div class="number-badge">02</div>
+          <div class="numbered-card-content">
+            <div class="numbered-icon-wrapper">
+              <svg class="numbered-icon" aria-hidden="true"><use href="#icon-users"/></svg>
+            </div>
+            <h3>Tables Rondes</h3>
+            <p>Actu, société, campus. Espace ouvert pour confronter des idées, poser des questions et affûter ton analyse.</p>
+            <div class="card-connector"></div>
+          </div>
+        </div>
+
+        <div class="numbered-card reveal">
+          <div class="number-badge">03</div>
+          <div class="numbered-card-content">
+            <div class="numbered-icon-wrapper">
+              <svg class="numbered-icon" aria-hidden="true"><use href="#icon-feather"/></svg>
+            </div>
+            <h3>Ateliers</h3>
+            <p>Prise de parole, rhétorique, écriture. Des sessions pratiques pour structurer, performer et gagner en confiance.</p>
+            <div class="card-connector"></div>
+          </div>
+        </div>
+
+        <div class="numbered-card reveal">
+          <div class="number-badge">04</div>
+          <div class="numbered-card-content">
+            <div class="numbered-icon-wrapper">
+              <svg class="numbered-icon" aria-hidden="true"><use href="#icon-mic"/></svg>
+            </div>
+            <h3>Événements Publics</h3>
+            <p>AG, conférences, soirées débats et GDE Newspaper. Des rendez‑vous qui font vivre le club sur le campus.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- DÉCOUVREZ NOS CRÉATIONS (BiblioEnsamr, Journal, Shop) -->
+  <section id="nos-creations" class="section creations-showcase">
+    <div class="container">
+      <h2 class="reveal title-bronze text-center mb-3">Découvrez nos créations</h2>
+      <p class="section-intro reveal">GDE ne se limite pas aux débats. Nous créons des ressources, partageons des savoirs, et cultivons une communauté créative à ENSAM Rabat.</p>
+      
+      <div class="showcase-grid">
+        
+        <!-- BiblioEnsamr - Featured Large Card -->
+        <div class="showcase-card showcase-featured reveal" data-tilt>
+          <div class="showcase-badge">Nouveau</div>
+          <div class="showcase-glow"></div>
+          <div class="showcase-icon-lg">
+            <svg aria-hidden="true"><use href="#icon-book"/></svg>
+          </div>
+          <h3>BiblioEnsamr</h3>
+          <p class="showcase-desc">Une bibliothèque numérique collaborative pour partager livres, articles et ressources. Cultivez votre curiosité intellectuelle.</p>
+          <div class="showcase-stats">
+            <div class="stat-item">
+              <span class="stat-value">350+</span>
+              <span class="stat-label">Livres</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">120+</span>
+              <span class="stat-label">Membres</span>
+            </div>
+          </div>
+          <a href="https://biblioensamr.gde.com" target="_blank" rel="noopener" class="showcase-btn">
+            <span>Découvrir BiblioEnsamr</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Journal GDE - Side Card -->
+        <div class="showcase-card reveal" data-tilt>
+          <div class="showcase-glow"></div>
+          <div class="showcase-icon">
+            <svg aria-hidden="true"><use href="#icon-feather"/></svg>
+          </div>
+          <h3>Journal GDE</h3>
+          <p class="showcase-desc">Articles, analyses et tribunes écrites par les étudiants d'ENSAM Rabat. Des idées qui comptent, des voix qui résonnent.</p>
+          <a href="https://journal.gde.com" target="_blank" rel="noopener" class="showcase-btn">
+            <span>Lire le Journal</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- GDE Shop - Side Card -->
+        <div class="showcase-card reveal" data-tilt>
+          <div class="showcase-badge showcase-badge-hot">Populaire</div>
+          <div class="showcase-glow"></div>
+          <div class="showcase-icon">
+            <svg aria-hidden="true"><use href="#icon-shopping"/></svg>
+          </div>
+          <h3>GDE Shop</h3>
+          <p class="showcase-desc">Vêtements, accessoires et produits GDE. Portez fièrement les couleurs du club et soutenez nos initiatives.</p>
+          <a href="https://shop.gde.com" target="_blank" rel="noopener" class="showcase-btn">
+            <span>Visiter la boutique</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- CONCEPT LINE (INTERLUDE) -->
+  <section class="section interlude">
+    <div class="container">
+      <p class="concept-line reveal">
+        <span class="concept-prefix">It's not just a club</span>
+        <span class="concept-separator">—</span>
+        <span class="concept-main">it's a <span class="concept-em">Concept</span></span>
+      </p>
+      <p class="concept-subtext reveal">A philosophy of discourse, a movement of minds, a legacy of thought.</p>
+    </div>
+  </section>
+
+  <!-- TEMPS FORTS (TIMELINE) -->
+  <section id="temps-forts" class="section bg-grad-panel-dark-180">
+    <div class="container">
+  <h2 class="reveal title-bronze text-center mb-3">Temps Forts</h2>
+      
+      <div class="timeline reveal">
+        <div class="timeline-track">
+          
+          <div class="timeline-item">
+            <span class="timeline-badge">Issue No. 1</span>
+            <div class="timeline-date">Sept. 2022</div>
+            <p class="timeline-desc">Lancement officiel du club et première AG. Présentation de la vision et élection du bureau.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-badge">Vol. I</span>
+            <div class="timeline-date">Oct. 2024</div>
+            <p class="timeline-desc">Premier débat Oxford sur le thème "L'intelligence artificielle menace-t-elle l'emploi ?"</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-badge">Issue No. 2</span>
+            <div class="timeline-date">Nov. 2024</div>
+            <p class="timeline-desc">Table ronde sur les enjeux climatiques et participation au tournoi inter-écoles de Casablanca.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-badge">Vol. II</span>
+            <div class="timeline-date">Janv. 2025</div>
+            <p class="timeline-desc">Lancement de la BiblioENSAMR et première édition du GDE Newspaper.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-badge">Issue No. 3</span>
+            <div class="timeline-date">Mars 2025</div>
+            <p class="timeline-desc">Conférence avec un ancien ministre sur le leadership et l'éloquence politique.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-badge">Vol. III</span>
+            <div class="timeline-date">Mai 2025</div>
+            <p class="timeline-desc">Grande soirée de débats ouverts au public et remise des certificats aux membres actifs.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- PALMARES 2025 -->
+  <section id="palmares" class="section bg-dark">
+    <div class="container">
+      <h2 class="reveal title-bronze text-center mb-3">Palmarès 2025</h2>
+      <div class="grid grid-2">
+        <div class="card reveal">
+          <svg class="card-icon" aria-hidden="true"><use href="#icon-mic"/></svg>
+          <h3>Eloquencia — ISCAE Casablanca</h3>
+          <p>Compétition nationale d’éloquence et de public speaking</p>
+          <ul class="award-list">
+            <li><span class="small-caps award-mark award-gold">1er prix</span> — Distinction</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <svg class="card-icon" aria-hidden="true"><use href="#icon-gavel"/></svg>
+          <h3>Doukkala Debate Congress — ENSA El Jadida</h3>
+          <p>Compétition nationale de débat</p>
+          <ul class="award-list">
+            <li><span class="small-caps award-mark">1er prix</span> — Section française</li>
+            <li><span class="small-caps award-mark">2ème prix</span> — Section arabe</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÉQUIPE -->
+  <section id="equipe" class="section bg-dark">
+    <div class="container">
+  <h2 class="reveal title-bronze text-center"><span class="stamp-declassified">DÉCLASSIFIÉ</span>Bureau 2025/2026 — The New Vanguard</h2>
+      
+      <div class="team-pages">
+        <div class="team-page team-grid active" aria-label="Bureau page 1">
+          <div class="team-card reveal">
+            <div class="team-avatar">RJ</div>
+            <div class="team-name">Rim Joulil</div>
+            <div class="team-role">Présidente & Respo Sessions</div>
+            <a href="#" class="team-link" aria-label="Profil LinkedIn de Rim Jouil">LinkedIn →</a>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar">AY</div>
+            <div class="team-name">Anas Younes</div>
+            <div class="team-role">Vice Président & Chef Section Anglaise</div>
+            <a href="#" class="team-link" aria-label="Profil LinkedIn d'Anas Younes">LinkedIn →</a>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar">MM</div>
+            <div class="team-name">Malak Moukrim</div>
+            <div class="team-role">Secrétaire générale</div>
+            <a href="#" class="team-link" aria-label="Profil LinkedIn de Malak Moukrim">LinkedIn →</a>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar">ME</div>
+            <div class="team-name">Mohamed Elfarssi</div>
+            <div class="team-role">Respo Activités</div>
+            <a href="#" class="team-link" aria-label="Profil LinkedIn de Mohamed Elfarsi">LinkedIn →</a>
+          </div>
+        </div>
+
+        <div class="team-page team-grid" aria-label="Bureau page 2">
+          <div class="team-card reveal">
+            <div class="team-avatar">AK</div>
+            <div class="team-name">Aicha Khadim</div>
+            <div class="team-role">Respo Sponsoring</div>
+            <a href="#" class="team-link" aria-label="Profil LinkedIn d'Aicha Khadim">LinkedIn →</a>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar">YF</div>
+            <div class="team-name">Yahya Farij</div>
+            <div class="team-role">Respo Événements & Chef Section Française</div>
+            <a href="#" class="team-link" aria-label="Profil LinkedIn de Yahya Farij">LinkedIn →</a>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar">FM</div>
+            <div class="team-name">Fatima Azzahrae Madani</div>
+            <div class="team-role">Chef Section Arabe</div>
+            <a href="#" class="team-link" aria-label="Profil LinkedIn de Fatima Azzahrae Madani">LinkedIn →</a>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar">HE</div>
+            <div class="team-name">Hasna Eljirari</div>
+            <div class="team-role">Respo Média I</div>
+            <a href="#" class="team-link" aria-label="Profil LinkedIn de Hasna Eljirari">LinkedIn →</a>
+          </div>
+        </div>
+
+        <div class="team-page team-grid" aria-label="Bureau page 3">
+          <div class="team-card reveal">
+            <div class="team-avatar">YR</div>
+            <div class="team-name">Youssef Roudmane</div>
+            <div class="team-role">Respo Media II</div>
+            <a href="#" class="team-link" aria-label="Profil LinkedIn de Youssef Roudmane">LinkedIn →</a>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar">SB</div>
+            <div class="team-name">Soumaya Bar‑Rhoute</div>
+            <div class="team-role">Respo Editorial & Respo Podcast II</div>
+            <a href="#" class="team-link" aria-label="Profil LinkedIn de Soumaya Bar‑Rhoute">LinkedIn →</a>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar">AAH</div>
+            <div class="team-name">Aya Alaoui Harouni</div>
+            <div class="team-role">Respo Podcast I & Conseillère</div>
+            <a href="#" class="team-link" aria-label="Profil LinkedIn d'Aya Alaoui Harouni">LinkedIn →</a>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar">AA</div>
+            <div class="team-name">Amine Abragh</div>
+            <div class="team-role">Respo Website</div>
+            <a href="#" class="team-link" aria-label="Profil LinkedIn d'Amine Abragh">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-controls" aria-label="Navigation bureau">
+        <button class="btn btn-secondary team-prev" aria-label="Précédent">← Précédent</button>
+        <div class="team-dots" role="tablist" aria-label="Pages de l’équipe">
+          <button class="dot active" data-page="0" role="tab" aria-selected="true" aria-label="Page 1"></button>
+          <button class="dot" data-page="1" role="tab" aria-selected="false" aria-label="Page 2"></button>
+          <button class="dot" data-page="2" role="tab" aria-selected="false" aria-label="Page 3"></button>
+        </div>
+        <button class="btn btn-secondary team-next" aria-label="Suivant">Suivant →</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- CHIFFRES -->
+  <section id="chiffres" class="section bg-grad-panel-dark-135">
+    <div class="container">
+      <div class="stats-grid">
+        
+        <div class="stat-item reveal">
+          <span class="stat-number" data-count="120">0</span>
+          <div class="stat-label small-caps">Membres Actifs</div>
+        </div>
+
+        <div class="stat-item reveal">
+          <span class="stat-number" data-count="24">0</span>
+          <div class="stat-label small-caps">Événements / An</div>
+        </div>
+
+        <div class="stat-item reveal">
+          <span class="stat-number" data-count="18">0</span>
+          <div class="stat-label small-caps">Invités d'Honneur</div>
+        </div>
+
+        <div class="stat-item reveal">
+          <span class="stat-number" data-count="350">0</span>
+          <div class="stat-label small-caps">Livres Partagés</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- REJOINDRE (CTA) -->
+  <section id="rejoindre" class="section bg-dark">
+    <div class="container">
+      <div class="cta-section reveal">
+        <!-- Join hero (keeps exact container spacing/dimensions) -->
+        <div class="join-hero" role="region" aria-labelledby="join-hero-title">
+          <div class="join-hero-grid">
+            <div class="join-copy">
+              <h2 id="join-hero-title" class="join-title">Join us or die trying</h2>
+              <p class="join-text">
+                Prêt·e à développer votre art oratoire, à enrichir votre esprit critique et à rejoindre une communauté intellectuelle stimulante ? Que vous soyez novice ou orateur·rice confirmé·e, GDE vous accueille à bras ouverts.
+              </p>
+            </div>
+
+            <div class="join-cta" aria-label="Contact et réseaux sociaux">
+              <a href="contact.html" class="btn btn-white" aria-label="Contactez nous">Contactez nous</a>
+              <div class="join-social" role="group" aria-label="Réseaux sociaux">
+                <a class="social" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>
+                </a>
+                <a class="social" href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 12a8.5 8.5 0 1 1-15.78 4.48L3 21l4.7-1.66A8.5 8.5 0 1 1 20.5 12Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 9.5c0 3.5 4 6 5.5 6 .6 0 1.4-.4 1.8-.9l.2-.2c.2-.2.2-.6 0-.8l-1.2-1.2c-.2-.2-.5-.2-.7 0l-.5.5c-.2.2-.5.2-.8.1-1.1-.5-2.1-1.4-2.6-2.6-.1-.3 0-.6.1-.8l.5-.5c.2-.2.2-.5 0-.7l-1.2-1.2c-.2-.2-.6-.2-.8 0l-.2.2c-.5.4-.9 1.2-.9 1.8Z" fill="currentColor"/></svg>
+                </a>
+                <a class="social" href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10v7" stroke="currentColor" stroke-width="2"/><circle cx="8" cy="7" r="1.25" fill="currentColor"/><path d="M12 17v-4a3 3 0 0 1 6 0v4" stroke="currentColor" stroke-width="2"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Decorative background inside the block (waves + diagonal bronze panel) -->
+          <div class="join-bg" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-baseline">SPEAK • WRITE • REVOLUTIONIZE</div>
+        
+        <ul class="footer-links small-caps">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="https://biblioensamr.gde.com" target="_blank" rel="noopener">BiblioEnsamr</a></li>
+          <li><a href="https://journal.gde.com" target="_blank" rel="noopener">Journal</a></li>
+          <li><a href="https://shop.gde.com" target="_blank" rel="noopener">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="footer-copy">
+          © 2025 Great Debaters ENSAM Rabat. Tous droits réservés.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Manifesto Modal (hidden by default) -->
+  <div class="modal" id="manifesto-modal" role="dialog" aria-modal="true" aria-labelledby="manifesto-title" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-dialog" tabindex="-1">
+      <button class="modal-close" aria-label="Fermer" title="Close (Esc)" data-close="true">×</button>
+      <h3 id="manifesto-title" class="title-bronze">GDE Manifesto</h3>
+      <div class="modal-body">
+        <p>
+          We believe in clarity over noise, ideas over ego, substance over spectacle. Debate is our training ground, curiosity our compass.
+        </p>
+        <p>
+          We show up prepared. We listen to understand. We argue to refine the truth, not to win at any cost.
+        </p>
+        <p>
+          We build speakers who serve ideas, and ideas that serve people. On campus and beyond, we aim to leave places more thoughtful than we found them.
+        </p>
+        <p class="small-caps muted">Speak • Write • Revolutionize</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ========================================
+    // MOBILE MENU TOGGLE
+    // ========================================
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mastheadNav = document.querySelector('.masthead-nav');
+    
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mastheadNav.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.masthead-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        mastheadNav.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.masthead-nav') && !e.target.closest('.menu-toggle')) {
+        menuToggle.classList.remove('active');
+        mastheadNav.classList.remove('active');
+      }
+    });
+
+    // ========================================
+    // SCROLLED HEADER
+    // ========================================
+    const masthead = document.querySelector('.masthead');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        masthead.classList.add('scrolled');
+      } else {
+        masthead.classList.remove('scrolled');
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+    // ========================================
+    // INTERSECTION OBSERVER (REVEAL ANIMATIONS)
+    // ========================================
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -80px 0px'
+      });
+
+      document.querySelectorAll('.reveal, .reveal-scale').forEach(el => {
+        revealObserver.observe(el);
+      });
+    } else {
+      document.querySelectorAll('.reveal, .reveal-scale').forEach(el => {
+        el.classList.add('revealed');
+      });
+    }
+
+    // ========================================
+    // FAQ ACCORDION
+    // ========================================
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isOpen = item.classList.contains('open');
+        
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle current
+        if (!isOpen) {
+          item.classList.add('open');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // ========================================
+    // COUNTER ANIMATION
+    // ========================================
+    function animateCounter(element, target, duration = 2000) {
+      const start = 0;
+      const increment = target / (duration / 16);
+      let current = start;
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target;
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current);
+        }
+      }, 16);
+    }
+
+    if (!prefersReducedMotion) {
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const target = parseInt(entry.target.dataset.count, 10);
+            animateCounter(entry.target, target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.5
+      });
+
+      document.querySelectorAll('.stat-number[data-count]').forEach(el => {
+        counterObserver.observe(el);
+      });
+    } else {
+      document.querySelectorAll('.stat-number[data-count]').forEach(el => {
+        el.textContent = el.dataset.count;
+      });
+    }
+
+    // ========================================
+    // ACTIVE NAV LINK
+    // ========================================
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.masthead-nav a').forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+
+    // ========================================
+    // SMOOTH PARALLAX EFFECT
+    // ========================================
+    if (!prefersReducedMotion) {
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const heroBg = document.querySelector('.hero-bg img');
+        if (heroBg) {
+          heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+      });
+    }
+
+    // ========================================
+    // SECRET EASTER EGGS (Manifesto, #lahomabarik, Concept Whisper)
+    // ========================================
+    (function secretEasterEggs() {
+      const body = document.body;
+      const logo = document.querySelector('.masthead-logo');
+      const whisper = document.querySelector('.hero-whisper');
+      const modal = document.getElementById('manifesto-modal');
+      const modalDialog = modal?.querySelector('.modal-dialog');
+
+      function openModal() {
+        if (!modal) return;
+        modal.setAttribute('aria-hidden', 'false');
+        modal.classList.add('open');
+        setTimeout(() => { modalDialog && modalDialog.focus(); }, 0);
+        // set hash for deep link
+        if (location.hash !== '#manifesto') history.pushState(null, '', '#manifesto');
+      }
+
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        if (location.hash === '#manifesto') history.pushState(null, '', ' ');
+      }
+
+      function revealWhisper(reveal=true) {
+        if (!whisper) return;
+        whisper.classList.toggle('show', !!reveal);
+        whisper.setAttribute('aria-hidden', reveal ? 'false' : 'true');
+        if (reveal && location.hash !== '#concept') history.pushState(null, '', '#concept');
+        if (!reveal && location.hash === '#concept') history.pushState(null, '', ' ');
+      }
+
+      // Alt+click on logo opens Manifesto
+      logo?.addEventListener('click', (e) => {
+        if (e.altKey) {
+          e.preventDefault();
+          openModal();
+        }
+      });
+
+      // Close modal on backdrop or close button
+      modal?.addEventListener('click', (e) => {
+        const target = e.target;
+        if (target instanceof Element && target.hasAttribute('data-close')) {
+          closeModal();
+        }
+      });
+
+      // Esc to close modal
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal?.classList.contains('open')) {
+          closeModal();
+        }
+      });
+
+      // Keyboard shortcuts
+      document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.shiftKey) {
+          if (e.key.toLowerCase() === 'm') {
+            e.preventDefault();
+            openModal();
+          }
+          if (e.key.toLowerCase() === 'c') {
+            e.preventDefault();
+            const isShown = whisper?.classList.contains('show');
+            revealWhisper(!isShown);
+          }
+        }
+      });
+
+      // Triple-click on strapline reveals whisper
+      let clickCount = 0; let clickTimer;
+      const strapline = document.querySelector('.hero-strapline');
+      strapline?.addEventListener('click', () => {
+        clickCount++;
+        clearTimeout(clickTimer);
+        clickTimer = setTimeout(() => { clickCount = 0; }, 500);
+        if (clickCount >= 3) {
+          revealWhisper(true);
+          clickCount = 0;
+        }
+      });
+
+      // Hash-based triggers (deep links)
+      function handleHash() {
+        const h = (location.hash || '').toLowerCase();
+        if (h === '#manifesto') openModal();
+        if (h === '#concept') revealWhisper(true);
+      }
+      window.addEventListener('hashchange', handleHash);
+      // Run on load
+      handleHash();
+    })();
+
+    // ========================================
+    // TEAM PAGER (4-4-4)
+    // ========================================
+    (function teamPager(){
+      const pages = Array.from(document.querySelectorAll('.team-page'));
+      if (!pages.length) return;
+      const dots = Array.from(document.querySelectorAll('.team-dots .dot'));
+      const prev = document.querySelector('.team-prev');
+      const next = document.querySelector('.team-next');
+      let index = pages.findIndex(p => p.classList.contains('active'));
+      if (index < 0) index = 0;
+
+      function show(i){
+        pages.forEach((p, k) => p.classList.toggle('active', k === i));
+        dots.forEach((d, k) => {
+          d.classList.toggle('active', k === i);
+          d.setAttribute('aria-selected', String(k === i));
+        });
+        index = i;
+      }
+      prev?.addEventListener('click', () => show((index - 1 + pages.length) % pages.length));
+      next?.addEventListener('click', () => show((index + 1) % pages.length));
+      dots.forEach((d) => d.addEventListener('click', () => show(parseInt(d.dataset.page, 10))));
+    })();
+
+    // ========================================
+    // 3D TILT EFFECT FOR SHOWCASE CARDS
+    // ========================================
+    (function showcaseTilt(){
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) return;
+
+      const cards = document.querySelectorAll('[data-tilt]');
+      
+      cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          
+          const rotateX = ((y - centerY) / centerY) * -8;
+          const rotateY = ((x - centerX) / centerX) * 8;
+          
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px) scale(1.02)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
